@@ -15,10 +15,23 @@ let currentScore = 0;
 const generateNumber = () => Math.trunc(Math.random() * 6 + 1);
 const getActivePlayer = () => document.querySelector('.player' + activePlayer);
 
+const finishTheGame = function () {
+   document.querySelector('body').style.filter = 'blur(3px)';
+   document.querySelector('body').style.opacity = '0.5';
+
+   newGameBtn.removeEventListener('click', reset);
+   rollDiceBtn.removeEventListener('click', roll);
+   holdBtn.removeEventListener('click', transfer);
+}
+
 const transfer = function (hold = true) {
    dieImage.src = '';
    const player = getActivePlayer();
    player.querySelector('.score').textContent = +player.querySelector('.score').textContent + (hold ? currentScore : 0);
+   if (hold && +player.querySelector('.score').textContent >= 100) {
+      finishTheGame();
+      return;
+   }
    player.querySelector('.current-score').textContent = 0;
 
    currentScore = 0;
