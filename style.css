@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+   background: linear-gradient(150deg, rgba(231,76,60,1) 0%, rgba(155,89,182,1) 100%); 
+   font-family: 'Roboto', sans-serif; 
+   filter: blur(0.5px); 
+} 
+
+p { 
+   margin: 0.8rem; 
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+/* style the content element */
+.content { 
+   position: relative; 
+   width: 80%;
+   height: 35rem;
+   display: flex; 
+}
+
+/* divide the content element into two halves */
+.content .player1, .content .player2 { 
+   position: relative; 
+   width: 50%;
+   height: 100%; 
+   text-align: center;
+
+   background-color: rgb(250, 250, 250, 0.5); 
+   transition: opacity 0.5s;
+}
+
+/* style the playe1 half */
+.content .player1 { 
+   border-top-left-radius: 20px; 
+   border-bottom-left-radius: 20px;
+} 
+
+.content .player2 { 
+   border-top-right-radius: 20px; 
+   border-bottom-right-radius: 20px; 
+} 
+
+.label { 
+   margin: auto; 
+   margin-top: 4rem; 
+   color: rgb(20, 20, 20); 
+   font-size: 2.3rem; 
+   font-weight: 600;
+} 
+
+.score { 
+   margin-top: 2rem;
+   font-size: 5rem; 
+   color: rgb(221, 43, 102, 1); 
+}
+
+.current-score-container { 
+   position: relative; 
+   top: 8rem; 
+   width: 35%; 
+   margin: auto; 
+   padding: 0.8rem; 
+   font-size: 0.9rem; 
+
+   border-radius: 13px;
+   background-color: rgb(221, 43, 102, 0.7); 
+   color: white; 
+   text-align: center; 
+} 
+
+.current-score { 
+   font-size: 2rem; 
+} 
+
+.inactive { 
+   opacity: 0.5; 
+} 
+
+div[class$="--btn"] { 
+   cursor: pointer; 
+   position: absolute; 
+   right: 50%; 
+   padding: 0.7rem 1.5rem; 
+   transform: translateX(50%); 
+
+   border-radius: 30px;
+   font-size: 1.2rem; 
+   background-color: rgb(240, 240, 240, 0.8); 
+   color:rgb(20, 20, 20); 
+   filter: blur(0.1px); 
+   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+} 
+
+div[class$="--btn"]:active { 
+   transform: translateX(50%) translateY(2px); 
+}
+
+.new-game--btn { 
+   top: 2rem; 
+}
+
+.roll-dice--btn { 
+   bottom: 9rem; 
+} 
+
+.hold--btn { 
+   bottom: 5rem; 
+} 
+
+.die-img { 
+   position: absolute; 
+   top: 8rem; 
+   right: 50%; 
+   transform: translateX(50%); 
+   width: 7rem; 
+   object-fit: contain; 
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
