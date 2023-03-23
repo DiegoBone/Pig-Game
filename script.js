@@ -16,12 +16,16 @@ const generateNumber = () => Math.trunc(Math.random() * 6 + 1);
 const getActivePlayer = () => document.querySelector('.player' + activePlayer);
 
 const finishTheGame = function () {
-   document.querySelector('body').style.filter = 'blur(3px)';
+   /* document.querySelector('body').style.filter = 'blur(3px)';
    document.querySelector('body').style.opacity = '0.5';
+   document.querySelector('body').style.userSelect = 'none';
 
    newGameBtn.removeEventListener('click', reset);
    rollDiceBtn.removeEventListener('click', roll);
-   holdBtn.removeEventListener('click', transfer);
+   holdBtn.removeEventListener('click', transfer); */
+
+   alert(`Player ${activePlayer} has won!`);
+   reset();
 }
 
 const transfer = function (hold = true) {
@@ -53,7 +57,9 @@ const roll = function () {
    }
 }
 
-const reset = function () {
+function reset() {
+   currentScore = 0;
+   activePlayer = 1;
    [player1Element, player2Element].forEach(playerElement => {
       playerElement.querySelector('.score').textContent = 0;
       playerElement.querySelector('.current-score').textContent = 0;
@@ -68,5 +74,3 @@ const reset = function () {
 newGameBtn.addEventListener('click', reset);
 rollDiceBtn.addEventListener('click', roll);
 holdBtn.addEventListener('click', transfer);
-
-

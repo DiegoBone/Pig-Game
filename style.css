@@ -4,6 +4,7 @@ body {
    background: linear-gradient(150deg, rgba(231,76,60,1) 0%, rgba(155,89,182,1) 100%); 
    font-family: 'Roboto', sans-serif; 
    filter: blur(0.5px); 
+   user-select: none; 
 } 
 
 p { 
@@ -95,7 +96,7 @@ div[class$="--btn"] {
    background-color: rgb(240, 240, 240, 0.8); 
    color:rgb(20, 20, 20); 
    filter: blur(0.1px); 
-   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3); 
 } 
 
 div[class$="--btn"]:active { 
