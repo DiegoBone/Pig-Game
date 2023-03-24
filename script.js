@@ -59,8 +59,6 @@ function reset() {
 
    player1Element.classList.remove('inactive');
    player2Element.classList.add('inactive');
-
-   dieImage.src = `dice-${score}.png`;
 }
 
 newGameBtn.addEventListener('click', reset);
