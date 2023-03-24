@@ -16,14 +16,6 @@ const generateNumber = () => Math.trunc(Math.random() * 6 + 1);
 const getActivePlayer = () => document.querySelector('.player' + activePlayer);
 
 const finishTheGame = function () {
-   /* document.querySelector('body').style.filter = 'blur(3px)';
-   document.querySelector('body').style.opacity = '0.5';
-   document.querySelector('body').style.userSelect = 'none';
-
-   newGameBtn.removeEventListener('click', reset);
-   rollDiceBtn.removeEventListener('click', roll);
-   holdBtn.removeEventListener('click', transfer); */
-
    alert(`Player ${activePlayer} has won!`);
    reset();
 }
